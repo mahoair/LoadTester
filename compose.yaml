@@ -1,0 +1,7 @@
+﻿services:
+  loadtester:
+    image: loadtester
+    build:
+      context: .
+      dockerfile: LoadTester/Dockerfile
+
