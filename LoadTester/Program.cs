@@ -7,7 +7,7 @@ var scenario = Scenario.Create("api_test", async context =>
         var step = await Step.Run("get_post", context, async () =>
         {
             using var client = new HttpClient();
-            var res = await client.GetAsync("https://apigw.trendyol.com/discovery-web-accountgw-service/api/locations/cities?culture=tr-TR&storefrontId=1&channelId=1", context.ScenarioCancellationToken);
+            var res = await client.GetAsync("https://api...", context.ScenarioCancellationToken);
 
             if (res.IsSuccessStatusCode)
                 return Response.Ok(statusCode: ((int)res.StatusCode).ToString());
