@@ -1,5 +1,51 @@
+# .NET build artifacts
 bin/
 obj/
+[Bb]uild/
+[Bb]uilds/
+out/
+publish/
+
+# NuGet
 /packages/
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+
+# IDE: Rider / JetBrains / ReSharper
+.idea/
 riderModule.iml
 /_ReSharper.Caches/
+.ReSharper*/
+*.DotSettings.user
+
+# IDE: Visual Studio
+.vs/
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+*.rsuser
+*.sln.docstates
+
+# Tests / Coverage
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Logs
+logs/
+*.log
+
+# NBomber reports
+/LoadTester/reports/
+/**/reports/
+
+# OS / Misc
+.DS_Store
+Thumbs.db
+
+# Docker (optional)
+.env
