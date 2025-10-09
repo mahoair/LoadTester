@@ -4,4 +4,20 @@
     build:
       context: .
       dockerfile: LoadTester/Dockerfile
-
+    environment:
+      - LOAD_PROFILE=baseline   # baseline | stress | soak
+      - RUN_HTTP=1
+      - RUN_HUB=1
+      # Uç noktalar
+      - BASE_HTTP=https://tbfapi.nikayazilim.com/webapi-service/api
+      - HUB_WSS=wss://tbfapi.nikayazilim.com/webapi-service/hub
+      # İçerik filtreleri
+      - MATCH_DATE=2025-01-01T00:00:00.000Z
+      # Baseline yük değerleri (profille override olur)
+      - HTTP_COPIES=50
+      - HTTP_RAMP_S=10
+      - HTTP_HOLD_S=30
+      - HUB_COPIES=50
+      - HUB_RAMP_S=10
+      - HUB_HOLD_S=30
+      - HTTP_TIMEOUT_S=15
